@@ -1,0 +1,421 @@
+body, p, td, caption, dl, dt, dd ,div {font-family: Arial, Verdana, Helvetica,  sans-serif;}
+	 
+H1 {font-family: Arial, Verdana, Helvetica,  sans-serif; font-size: 26px; font-weight:normal; color: #990000; margin-bottom:.5ex;   margin-top: 0; padding:0; }
+H2 {font-family: Arial, Verdana, Helvetica,  sans-serif; font-size: 18px ; font-weight:bold; color: #990000; margin-bottom:.5ex;  margin-top:.5ex; padding:0; }
+H3, dt {font-family: Arial, Verdana, Helvetica,  sans-serif; font-size: 13px; font-weight:bold; color: #990000; margin-top:2.2ex; margin-bottom:.5ex;  padding:0; }
+H4 {font-family: Arial, Verdana, Helvetica,  sans-serif; font-size: 13px; font-weight:bold; color: #990000; margin-bottom:.5ex;  padding:0; }
+
+
+p, dd ,div {font-size: 12px; color: black;}
+
+/* Vertical space in tables other than the header and footer banners */
+table {
+	margin-bottom:2ex;
+}
+
+/* Left-align table headers. <th> is centered by default. */
+th {text-align: left; font-family: Arial, Verdana, Helvetica,  sans-serif; font-size: 1.0em; margin-bottom:.5ex;  padding:4px; } 
+
+/* from cppdoc.css */
+
+em {
+	font-style: normal;	
+}
+TABLE, TD {
+	font-size: 13px;
+}
+
+TABLE.membersummary {
+	width: 100%;
+	border-collapse:collapse;
+	border-width: 2px;
+}
+
+TABLE.indexlist {
+	margin-top: 12px;
+	border-collapse:collapse;
+	border-width: 2px;
+}
+
+
+TABLE.memberlist {
+	margin-top: 12px;
+	border-collapse:collapse;
+	border-width: 2px;
+	background-color: #F2F2F2;
+}
+
+TABLE.memberlist tr, TABLE.memberlist td, TABLE.memberlist th {
+	border: 2px ridge #858a8b;
+	padding: 4px;
+}	
+
+dl.user dt {
+	margin-bottom: 16px;
+}
+
+dl.user dd, dl, dd {
+	margin-left: 0px;
+}
+dd div.fragment {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+TABLE.usertable {
+	border-collapse:collapse;
+	border-width: 2px;
+	background-color: #F2F2F2;
+}
+
+/* Inner User tables formatting */
+TABLE.usertable  table {
+   margin: 12px 12px 12px 12px;
+   background-color: white;
+}
+
+TABLE.usertable tr, TABLE.usertable td, TABLE.usertable th {
+	border: 2px ridge #858a8b;
+	padding: 4px;
+	
+}
+
+TABLE.usertable th {
+	font-size: 13px;
+}
+
+TD.docparamname {
+	font-family: "courier new", courier, monospace;
+}
+
+/* end from cppdoc.css */
+
+CAPTION { font-weight: bold }
+DIV.qindex {
+	width: 100%;
+	background-color: #F2F2F2;
+	border: 1px outset #858a8b;
+	text-align: center;
+	margin: 2px;
+	padding: 2px;
+	line-height: 140%;
+}
+DIV.nav {
+	width: 100%;
+	background-color: #e8eef2;
+	border: 1px solid #84b0c7;
+	text-align: center;
+	margin: 2px;
+	padding: 2px;
+	line-height: 140%;
+}
+DIV.navtab {
+       background-color: #e8eef2;
+       border: 1px solid #84b0c7;
+       text-align: center;
+       margin: 2px;
+       margin-right: 15px;
+       padding: 2px;
+}
+
+TD.navtab {
+       font-size: 70%;
+}
+A.el { 
+	text-decoration: none; 
+	font-family: "courier new", courier, monospace; 
+	font-size: 13px; }
+
+p a.el  { 
+	text-decoration: none; 
+	font-family: Arial, Verdana, Helvetica,  sans-serif;
+	font-size: 13px; 
+	color: black;}
+	
+dd p { margin-top: -3px; margin-bottom: -3px; }
+
+DL.el { margin-left: -1cm }
+.fragment { font-family: "courier new", courier, monospace; }
+
+code, pre.fragment {display: inline; color:#000000; border:none; margin-top: 0px; margin-bottom: 0px; padding-left: 0px; padding-right: 0px; }
+
+tt, pre, code {
+	font-family: "courier new", courier, monospace; 
+	font-size: 106%
+}
+
+pre {margin-top:1.0ex; margin-bottom:.7ex;  padding:0; }
+
+DIV.ah {font-weight: bold; margin-bottom: 0px; margin-top: 16px }
+
+DIV.groupHeader {
+       margin-left: 16px;
+       margin-top: 12px;
+       margin-bottom: 6px;
+       font-weight: bold;
+}
+DIV.groupText { margin-left: 16px; font-style: italic; font-size: 90% }
+
+TD.indexkey {
+	font-family: Arial, Verdana, Helvetica,  sans-serif; 
+	font-size: 13px;
+	padding-right  : 10px;
+	padding-top    : 2px;
+	padding-left   : 10px;
+	padding-bottom : 2px;
+	margin-left    : 0px;
+	margin-right   : 0px;
+	margin-top     : 2px;
+	margin-bottom  : 2px;
+	border: 2px ridge #858a8b;
+	background-color: #F2F2F2;
+}
+TD.indexvalue {
+		
+	background-color: #F2F2F2;
+	font-family: Arial, Verdana, Helvetica,  sans-serif;
+	font-size: 13px;
+	/* font-style: italic; */
+	padding-right  : 10px;
+	padding-top    : 2px;
+	padding-left   : 10px;
+	padding-bottom : 2px;
+	margin-left    : 0px;
+	margin-right   : 0px;
+	margin-top     : 2px;
+	margin-bottom  : 2px;
+	border: 2px ridge #858a8b;
+	background-color: #F2F2F2;
+}
+TR.memlist {
+   background-color: #f0f0f0; 
+}
+P.formulaDsp { text-align: center; }
+IMG.formulaDsp { }
+IMG.formulaInl { vertical-align: middle; }
+SPAN.keyword       { color: #008000 }
+SPAN.keywordtype   { color: #604020 }
+SPAN.keywordflow   { color: #e08000 }
+SPAN.comment       { color: #800000 }
+SPAN.preprocessor  { color: #806020 }
+/* SPAN.stringliteral { color: #002080 } */
+/* SPAN.charliteral   { color: #008080 } */
+.mdescLeft {
+    padding: 0px 8px 4px 8px;
+	border-top: 2px none #E0E0E0;
+	border-right: 2px ridge #858a8b;
+	border-bottom: 2px ridge #858a8b;
+	border-left: 2px ridge #858a8b;
+	margin: 0px;
+	background-color: #F2F2F2;
+}
+.mdescRight {
+    padding: 0px 8px 4px 8px;
+	border-top: 2px none #E0E0E0;
+	border-right: 2px ridge #858a8b;
+	border-bottom: 2px ridge #858a8b;
+	border-left: 2px ridge #858a8b;
+	background-color: #F2F2F2;
+	padding-left : 28px;
+}
+.memItemLeft {
+	text-align: left;
+	font-family: "courier new", courier, monospace;
+	padding: 1px 0px 0px 8px;
+	margin: 4px;
+	border-top-width: 2px;
+	border-right-width: 2px;
+	border-bottom-width: 2px;
+	border-left-width: 2px;
+	border-top-color: #858a8b;
+	border-right-color: #858a8b;
+	border-bottom-color: #858a8b;
+	border-left-color: #858a8b;
+	border-top-style: ridge;
+	border-right-style: ridge;
+	border-bottom-style: none;
+	border-left-style: ridge;
+	background-color: #F2F2F2;
+	
+}
+.memItemRight {
+	font-family: "courier new", courier, monospace;
+	padding: 1px 8px 0px 8px;
+	margin: 4px;
+	border-top-width: 2px;
+	border-right-width: 2px;
+	border-bottom-width: 2px;
+	border-left-width: 2px;
+	border-top-color: #858a8b;
+	border-right-color: #858a8b;
+	border-bottom-color: #858a8b;
+	border-left-color: #858a8b;
+	border-top-style: ridge;
+	border-right-style: ridge;
+	border-bottom-style: none;
+	border-left-style: ridge;
+	background-color: #F2F2F2;
+}
+
+.memTemplItemLeft {
+	padding: 1px 0px 0px 8px;
+	margin: 4px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-color: #E0E0E0;
+	border-right-color: #E0E0E0;
+	border-bottom-color: #E0E0E0;
+	border-left-color: #E0E0E0;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	background-color: #F2F2F2;
+	font-size: 80%;
+}
+.memTemplItemRight {
+	padding: 1px 8px 0px 8px;
+	margin: 4px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-color: #E0E0E0;
+	border-right-color: #E0E0E0;
+	border-bottom-color: #E0E0E0;
+	border-left-color: #E0E0E0;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	background-color: #F2F2F2;
+	font-size: 80%;
+}
+.memTemplParams {
+	padding: 1px 0px 0px 8px;
+	margin: 4px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-color: #E0E0E0;
+	border-right-color: #E0E0E0;
+	border-bottom-color: #E0E0E0;
+	border-left-color: #E0E0E0;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+    color: #606060;
+	background-color: #FAFAFA;
+	font-size: 80%;
+}
+.search     { color: #003399;
+              font-weight: bold;
+}
+FORM.search {
+              margin-bottom: 0px;
+              margin-top: 0px;
+}
+INPUT.search { font-size: 75%;
+               color: #000080;
+               font-weight: normal;
+               background-color: #e8eef2;
+}
+TD.tiny      { font-size: 75%;
+}
+   
+a {color:#002BC7;}
+a:link {color: blue; text-decoration:underline;}
+a:visited {color: blue; text-decoration:underline;}
+a:hover {color: blue; text-decoration:underline; }
+a:active {color: blue; text-decoration:underline;}
+
+/* Links in code samples*/
+A.code:link { text-decoration: none; font-weight: normal; color: #0000FF}
+A.code:visited { text-decoration: none; font-weight: normal; color: #0000FF}
+A.codeRef:link { font-weight: normal; color: #0000FF}
+A.codeRef:visited { font-weight: normal; color: #0000FF}
+
+
+.dirtab { padding: 4px;
+          border-collapse: collapse;
+          border: 1px solid #84b0c7;
+}
+TH.dirtab { background: #e8eef2;
+            font-weight: bold;
+}
+HR {
+     border: none;
+}
+
+/* Style for detailed member documentation */
+.memtemplate {
+  font-size: 80%;
+  color: #606060;
+  font-size: 13px;
+} 
+.memnav { 
+  text-align: center;
+  margin: 2px;
+  margin-right: 15px;
+  padding: 2px;
+}
+.memitem {
+  /*padding: 4px;*/
+  border-bottom    : 1px solid #858a8b;
+}
+.memname {
+  color: blue;
+  font-weight: bold;
+  font-family: "courier new", courier, monospace;
+  white-space: nowrap;
+  font-size: 13px;
+  margin-top:2.2ex;
+}
+.memdoc{
+ color: black;
+}
+.memproto {
+  width: 100%;
+}
+.paramkey {
+  text-align: right;
+}
+.paramtype {
+  font-family: "courier new", courier, monospace;
+  white-space: nowrap;
+  padding: 0px;
+}
+.paramname {
+  font-family: "courier new", courier, monospace;
+  white-space: nowrap;
+  padding: 0px;
+}
+/* End Styling for detailed member documentation */
+
+/* for the tree view */
+.ftvtree {
+	font-family: Arial, Verdana, Helvetica,  sans-serif;
+	margin:0.5em;
+}
+.directory { font-size: 9pt; font-family: Arial, Verdana, Helvetica,  sans-serif; }
+.directory h3 { margin: 0px; margin-top: 1em; font-size: 11pt; }
+.directory > h3 { margin-top: 0; }
+.directory p { margin: 0px; white-space: nowrap; }
+.directory div { display: none; margin: 0px; }
+.directory img { vertical-align: -30%; }
+
+.copyright { 
+   font-family: Arial, Verdana, Helvetica,  sans-serif;
+   font-size: 8pt; 
+   font-style: italic;
+   /*border-top    : 1px solid #858a8b;*/
+   }
+   
+/* ibm-access styles */
+img.ibm-access {
+    border: 0px;
+}

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="© Copyright IBM Corporation 2011" />
+<meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2011" />
+<meta name="security" content="public" />
+<meta name="Robots" content="index,follow" />
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+<meta name="DC.Type" content="topic" />
+<meta name="DC.Title" content="CPLEX for MATLAB Toolbox" />
+<meta name="abstract" content="The toolbox provides functions for solving a variety of mathematical programming problems." />
+<meta name="description" content="The toolbox provides functions for solving a variety of mathematical programming problems." />
+<meta name="DC.Relation" scheme="URI" content="../topics/gs_ov.html" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="sw5hiDR6" />
+<meta name="DC.Language" content="en-us" />
+<!-- Licensed Materials Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="../ibmdita.css" />
+<link rel="stylesheet" type="text/css" href="../swg_info_common_opti.css" />
+<link rel="Start" href="../topics/gs_ov.html" />
+<title>CPLEX for MATLAB Toolbox</title>
+</head>
+<body id="sw5hiDR6"><a name="sw5hiDR6"><!-- --></a>
+<h1 class="title topictitle1">CPLEX for
+MATLAB Toolbox</h1>
+<div class="body"><p class="shortdesc">The toolbox provides functions for solving a variety
+of mathematical programming problems.</p>
+<p class="p">The CPLEX® for
+MATLAB® Toolbox provides functions for solving a variety of mathematical
+programming problems. The toolbox functions are designed to take a
+model description as input and produce a solution as output.</p>
+<p class="p">For example:</p>
+<pre class="pre codeblock">x = cplexlp(f,Aineq,bineq,Aeq,beq,lb,ub)</pre>
+<p class="p">finds the minimum of a linear programming problem specified
+by </p>
+<pre class="pre codeblock">   min      f*x 
+   st.      Aineq*x &lt;= bineq 
+            Aeq*x    = beq
+            lb &lt;= x &lt;= ub
+ </pre>
+<p class="p">The toolbox provides the functions <samp class="ph codeph">cplexlp</samp>,<samp class="ph codeph">cplexqp</samp> and<samp class="ph codeph">cplexbilp</samp> to
+solve linear programming problems (LP), quadratic programming problems
+(QP) and binary integer programming problems (BILP).</p>
+<p class="p">The toolbox provides functions that support the solution
+of the basic problem types handled by CPLEX are:</p>
+<ul class="ul"><li class="li"><p class="p"> <samp class="ph codeph">cplexlp</samp> for linear
+programming problems (LP), </p>
+ </li>
+<li class="li"><p class="p"><samp class="ph codeph">cplexqp</samp> for quadratic
+programming problems (QP) and</p>
+ </li>
+<li class="li"><p class="p"><samp class="ph codeph">cplexbilp</samp> for binary
+integer programming problems (BILP).</p>
+ </li>
+</ul>
+<p class="p">Functions that support the solution of additional problem
+types handled by CPLEX are
+provided. These functions are:</p>
+<ul class="ul"><li class="li"><p class="p"> <samp class="ph codeph">cplexqcp</samp> for quadratically
+constrained programming problems (QCP),</p>
+</li>
+<li class="li"><p class="p"><samp class="ph codeph">cplexmilp</samp> for mixed
+integer linear programming problems (MIP),</p>
+</li>
+<li class="li"><p class="p"><samp class="ph codeph">cplexmiqp</samp> for mixed
+integer quadratic programming problems (MIQP) and</p>
+</li>
+<li class="li"><p class="p"><samp class="ph codeph">cplexmiqcp</samp> for
+mixed integer quadratically constrained mixed integer programming
+problems (MIQCP).</p>
+ </li>
+</ul>
+<p class="p">The solution of least square problems is supported through
+the functions:</p>
+<ul class="ul"><li class="li"><p class="p"><samp class="ph codeph">cplexlsqlin</samp> for
+linearly constrained least squares problems,</p>
+ </li>
+<li class="li"><p class="p"> <samp class="ph codeph">cplexlsqmilp</samp> for
+linearly constrained mixed integer least squares problems, </p>
+</li>
+<li class="li"><p class="p"> <samp class="ph codeph">cplexlsqbilp</samp> for
+linearly constrained binary integer least squares problems, </p>
+</li>
+<li class="li"><p class="p"> <samp class="ph codeph">cplexlsqmiqcp</samp> for
+quadratically constrained mixed integer least squares problems,</p>
+</li>
+<li class="li"><p class="p"><samp class="ph codeph">cplexlsqqcp</samp> for
+quadratically constrained programming problems,</p>
+</li>
+<li class="li"><p class="p"><samp class="ph codeph">cplexlsqnonneglin</samp> for
+nonnegative least squares problems,</p>
+ </li>
+<li class="li"><p class="p"><samp class="ph codeph">cplexlsqnonnegmilp</samp> for
+nonnegative mixed integer least squares problems,</p>
+</li>
+<li class="li"><p class="p"><samp class="ph codeph">cplexlsqnonnegmiqcp</samp> for
+nonnegative quadratically constrained mixed integer least squares
+problems and</p>
+</li>
+<li class="li"><p class="p"><samp class="ph codeph">cplexlsqnonnegqcp</samp> for
+nonnegative quadratically constrained programming problems.</p>
+</li>
+</ul>
+<p class="p">The advantage of the toolbox design is that you can reuse
+your code where you had used MATLAB Optimization Toolbox functions
+to solve linear programming, quadratic programming, binary integer
+programming, linearly constrained least squares, and nonnegative least
+squares problems.  </p>
+<div class="section" id="sw5hiDR6__OYbEKI45"><a name="sw5hiDR6__OYbEKI45"><!-- --></a><h2 class="title sectiontitle">Setting and querying
+parameters in the CPLEX for
+MATLAB Toolbox</h2><p class="p">Options, also called parameters,
+can be set to control the solution of problems. The toolbox provides
+two types of options input. One type corresponds to the MATLAB Optimization
+Toolbox options, and the other type is the CPLEX parameters. You can use either or both
+of these types of options. If you use both, the CPLEX parameters will override the MATLAB options.</p>
+<p class="p">The toolbox options are listed in the following table.</p>
+<p class="p"></p>
+<p class="p"><strong class="ph b">Options corresponding to the
+MATLAB Optimization Toolbox</strong></p>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table NoBorder" rules="none" frame="void" border="0"><tbody class="tbody"><tr class="row"><td class="entry" align="left" valign="top" width="50%"><samp class="ph codeph">Diagnostics</samp>  </td>
+<td class="entry" align="left" valign="top" width="50%">'on' | {'off'} </td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%"><samp class="ph codeph">Display</samp>   </td>
+<td class="entry" align="left" valign="top" width="50%">'off' | 'iter' | 'final' | 'notify'</td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%"><samp class="ph codeph">MaxIter</samp>  </td>
+<td class="entry" align="left" valign="top" width="50%">refer to <samp class="ph codeph">cplex.Param.simplex.limits.iterations</samp></td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%"><samp class="ph codeph">Simplex </samp></td>
+<td class="entry" align="left" valign="top" width="50%">refer to <samp class="ph codeph">cplex.Param.lpmethod</samp></td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%"> </td>
+<td class="entry" align="left" valign="top" width="50%">refer to <samp class="ph codeph">cplex.Param.qpmethod </samp></td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%"> </td>
+<td class="entry" align="left" valign="top" width="50%">refer to <samp class="ph codeph">cplex.Param.mip.strategy.startalgorithm</samp></td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%"><samp class="ph codeph">BranchStrategy</samp></td>
+<td class="entry" align="left" valign="top" width="50%">refer to <samp class="ph codeph">cplex.Param.mip.strategy.variableselect </samp></td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%"><samp class="ph codeph">MaxNodes</samp></td>
+<td class="entry" align="left" valign="top" width="50%">refer to <samp class="ph codeph">cplex.Param.mip.limits.nodes</samp></td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%"><samp class="ph codeph">MaxTime</samp></td>
+<td class="entry" align="left" valign="top" width="50%">refer to <samp class="ph codeph">cplex.Param.timelimit</samp></td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%"><samp class="ph codeph">NodeDisplayInterval</samp></td>
+<td class="entry" align="left" valign="top" width="50%">refer to <samp class="ph codeph">cplex.Param.mip.interval</samp></td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%"><samp class="ph codeph">NodeSearchStrategy</samp></td>
+<td class="entry" align="left" valign="top" width="50%">refer to <samp class="ph codeph">cplex.Param.mip.strategy.nodeselect</samp></td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%"><samp class="ph codeph">TolFun</samp></td>
+<td class="entry" align="left" valign="top" width="50%">refer to <samp class="ph codeph">cplex.Param.simplex.tolerances.optimality</samp></td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%"><samp class="ph codeph">TolXInteger</samp></td>
+<td class="entry" align="left" valign="top" width="50%">refer to <samp class="ph codeph">cplex.Param.mip.tolerances.integrality</samp></td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%"><samp class="ph codeph">TolRLPFun</samp></td>
+<td class="entry" align="left" valign="top" width="50%">refer to <samp class="ph codeph">cplex.Param.simplex.tolerances.optimality</samp></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">. </p>
+<p class="p">These options can be set using
+the toolbox function <samp class="ph codeph">optimset</samp>. For example,
+the following code turns on the optimizer output and sets a node limit
+of 400, </p>
+<pre class="pre codeblock">options = cplexoptimset('Diagnostics', 'on', 'MaxNodes', 400);</pre>
+<p class="p">Alternatively, these options can be set directly on the fields
+of the structure. For example, the following code has the same result
+as the previous one.</p>
+<pre class="pre codeblock">options = cplexoptimset;
+options.Diagnostics = 'on';
+options.MaxNodes = 400;</pre>
+<p class="p">The current and default
+values of the options can be queried with the function <samp class="ph codeph">optimget</samp>.</p>
+<p class="p">If you need to use CPLEX parameters
+that do not correspond to the options in the MATLAB Optimization Toolbox,
+you can create a structure which contains all of the CPLEX parameters. For example, to set a node
+limit of 400 and instruct CPLEX to
+use traditional branch and cut style search:</p>
+<pre class="pre codeblock">opt = cplexoptimset('cplex'); 
+opt.mip.limits.nodes=400; 
+opt.mip.strategy.search=1;</pre>
+<div class="note tip"><span class="tiptitle">Tip:</span>  <p class="p">If you are already familiar with the names of parameters
+in the Interactive Optimizer, then you quickly recognize names of
+parameters in CPLEX for MATLAB.
+For example, the command “<samp class="ph codeph">set mip limits nodes 1</samp>”
+in the Interactive Optimizer corresponds to “<samp class="ph codeph">opt.mip.limits.nodes
+= 1</samp>;” in the CPLEX for
+MATLAB Toolbox where <samp class="ph codeph">opt</samp> was created with
+the line “<samp class="ph codeph">opt = optimset('cplex');</samp>”</p>
+ <p class="p">To assist in setting parameters, auto-completion of parameter
+names is available in the MATLAB environment.</p>
+ </div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../topics/gs_ov.html" title="CPLEX for MATLAB provides two APIs for solving mathematical programming problems, the toolbox functions and the Cplex class.">Overview of the CPLEX for MATLAB APIs</a></div>
+</div>
+</div></body>
+</html>

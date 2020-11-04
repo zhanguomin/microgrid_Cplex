@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="© Copyright IBM Corporation 2011" />
+<meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2011" />
+<meta name="security" content="public" />
+<meta name="Robots" content="index,follow" />
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+<meta name="DC.Type" content="topic" />
+<meta name="DC.Title" content="Examples of the CPLEX for MATLAB Toolbox" />
+<meta name="abstract" content="These examples illustrate the usage of toolbox functions to solve mathematical programming problems." />
+<meta name="description" content="These examples illustrate the usage of toolbox functions to solve mathematical programming problems." />
+<meta name="DC.Relation" scheme="URI" content="../topics/examples.html" />
+<meta name="DC.Relation" scheme="URI" content="../topics/example_runtoolboxexamples.html" />
+<meta name="DC.Relation" scheme="URI" content="../topics/example_cplexbilpex.html" />
+<meta name="DC.Relation" scheme="URI" content="../topics/example_cplexlpex.html" />
+<meta name="DC.Relation" scheme="URI" content="../topics/example_cplexlsqbilpex.html" />
+<meta name="DC.Relation" scheme="URI" content="../topics/example_cplexlsqlinex.html" />
+<meta name="DC.Relation" scheme="URI" content="../topics/example_cplexlsqmilpex.html" />
+<meta name="DC.Relation" scheme="URI" content="../topics/example_cplexlsqmiqcpex.html" />
+<meta name="DC.Relation" scheme="URI" content="../topics/example_cplexlsqnonneglinex.html" />
+<meta name="DC.Relation" scheme="URI" content="../topics/example_cplexlsqnonnegmilpex.html" />
+<meta name="DC.Relation" scheme="URI" content="../topics/example_cplexlsqnonnegmiqcpex.html" />
+<meta name="DC.Relation" scheme="URI" content="../topics/example_cplexlsqnonnegqcp.html" />
+<meta name="DC.Relation" scheme="URI" content="../topics/example_cplexlsqqcp.html" />
+<meta name="DC.Relation" scheme="URI" content="../topics/example_cplexmilpex.html" />
+<meta name="DC.Relation" scheme="URI" content="../topics/example_cplexmiqpex.html" />
+<meta name="DC.Relation" scheme="URI" content="../topics/example_cplexqcpex.html" />
+<meta name="DC.Relation" scheme="URI" content="../topics/example_cplexqpex.html" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="TXZ9b9EW" />
+<meta name="DC.Language" content="en-us" />
+<!-- Licensed Materials Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="../ibmdita.css" />
+<link rel="stylesheet" type="text/css" href="../swg_info_common_opti.css" />
+<link rel="Start" href="../topics/examples.html" />
+<title>Examples of the CPLEX for MATLAB Toolbox</title>
+</head>
+<body id="TXZ9b9EW"><a name="TXZ9b9EW"><!-- --></a>
+<h1 class="title topictitle1">Examples of the CPLEX for MATLAB Toolbox</h1>
+<p class="shortdesc">These examples illustrate the usage of toolbox functions
+to solve mathematical programming problems.</p>
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../topics/example_runtoolboxexamples.html">Example: runtoolboxexamples.m</a></strong><br />
+This function runs all of the provided examples
+of the toolbox functions in succession.</li>
+<li class="link ulchildlink"><strong><a href="../topics/example_cplexbilpex.html">Example: cplexbilpex.m</a></strong><br />
+This example uses the function <samp class="ph codeph">cplexbilp</samp> to
+solve a binary integer programming model.</li>
+<li class="link ulchildlink"><strong><a href="../topics/example_cplexlpex.html">Example: cplexlpex.m</a></strong><br />
+This example uses the function <samp class="ph codeph">cplexlp</samp> to
+solve a linear programming model.</li>
+<li class="link ulchildlink"><strong><a href="../topics/example_cplexlsqbilpex.html">Example: cplexlsqbilpex.m</a></strong><br />
+This example uses the function <samp class="ph codeph">cplexlsqbilp</samp> to
+solve a constrained least squares problem with some binary variables.</li>
+<li class="link ulchildlink"><strong><a href="../topics/example_cplexlsqlinex.html">Example: cplexlsqlinex.m</a></strong><br />
+This example uses the function <samp class="ph codeph">cplexlsqlin</samp> to
+solve a constrained least squares programming model.</li>
+<li class="link ulchildlink"><strong><a href="../topics/example_cplexlsqmilpex.html">Example: cplexlsqmilpex.m</a></strong><br />
+This example uses the function <samp class="ph codeph">cplexlsqmilp</samp> to
+solve a constrained least squares problem with some binary variables.</li>
+<li class="link ulchildlink"><strong><a href="../topics/example_cplexlsqmiqcpex.html">Example: cplexlsqmiqcpex.m</a></strong><br />
+This example uses the function <samp class="ph codeph">cplexlsqmiqcp</samp> to
+solve a constrained least squares problem with some binary variables
+and a constraint that is quadratic.</li>
+<li class="link ulchildlink"><strong><a href="../topics/example_cplexlsqnonneglinex.html">Example: cplexlsqnonneglinex.m</a></strong><br />
+This example uses the function <samp class="ph codeph">cplexlsqnoneglin</samp> to
+solve a nonegative least squares programming model.</li>
+<li class="link ulchildlink"><strong><a href="../topics/example_cplexlsqnonnegmilpex.html">Example: cplexlsqnonnegmilpex.m</a></strong><br />
+This example uses the function <samp class="ph codeph">cplsqnonnegmilexlp</samp> to
+solve a nonnegative least squares problem with binary variables.</li>
+<li class="link ulchildlink"><strong><a href="../topics/example_cplexlsqnonnegmiqcpex.html">Example: cplexlsqnonnegmiqcpex.m</a></strong><br />
+This example uses the function <samp class="ph codeph">cplexlexlsqnonnegmiqcp</samp> to
+solve a nonnegative least squares problem with binary variables and
+a quadratic constraint.</li>
+<li class="link ulchildlink"><strong><a href="../topics/example_cplexlsqnonnegqcp.html">Example: cplexlsqnonnegqcpex.m</a></strong><br />
+This example uses the function <samp class="ph codeph">cplexlsqnonegqcp</samp> to
+solve a nonnegative constrained least squares problem with some quadratic
+constraints.</li>
+<li class="link ulchildlink"><strong><a href="../topics/example_cplexlsqqcp.html">Example: cplexlsqqcpex.m</a></strong><br />
+This example uses the function <samp class="ph codeph">cplexlexlsqqcp</samp> to
+solve a quadratically constrained least squares problem.</li>
+<li class="link ulchildlink"><strong><a href="../topics/example_cplexmilpex.html">Example: cplexmilpex.m</a></strong><br />
+This example uses the function <samp class="ph codeph">cplexmilp</samp> to
+solve a mixed-integer linear programming model.</li>
+<li class="link ulchildlink"><strong><a href="../topics/example_cplexmiqpex.html">Example: cplexmiqpex.m</a></strong><br />
+This example uses the function <samp class="ph codeph">cplexmiqp</samp> to
+solve a mixed-integer quadratic programming model.</li>
+<li class="link ulchildlink"><strong><a href="../topics/example_cplexqcpex.html">Example: cplexqcpex.m</a></strong><br />
+This example uses the function <samp class="ph codeph">cplexqcp</samp> to
+solve a quadratically constrained quadratic programming model.</li>
+<li class="link ulchildlink"><strong><a href="../topics/example_cplexqpex.html">Example: cplexqpex.m</a></strong><br />
+This example uses the function <samp class="ph codeph">cplexqp</samp> to
+solve a quadratically constrained quadratic programming model.</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../topics/examples.html" title="Illustrative examples of mathematical programming problems that can be solved are provided.">Examples</a></div>
+</div>
+</div></body>
+</html>

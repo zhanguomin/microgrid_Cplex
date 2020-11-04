@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="© Copyright IBM Corporation 2011" />
+<meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2011" />
+<meta name="security" content="public" />
+<meta name="Robots" content="index,follow" />
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+<meta name="DC.Type" content="topic" />
+<meta name="DC.Title" content="Example: steel.m" />
+<meta name="abstract" content="This example illustrates using the Cplex Class API to solve a multiperiod production model." />
+<meta name="description" content="This example illustrates using the Cplex Class API to solve a multiperiod production model." />
+<meta name="DC.Relation" scheme="URI" content="../topics/examples_cplex.html" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="onJG34hl" />
+<meta name="DC.Language" content="en-us" />
+<!-- Licensed Materials Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="../ibmdita.css" />
+<link rel="stylesheet" type="text/css" href="../swg_info_common_opti.css" />
+<link rel="Start" href="../topics/examples_cplex.html" />
+<title>Example: steel.m</title>
+</head>
+<body id="onJG34hl"><a name="onJG34hl"><!-- --></a>
+<h1 class="title topictitle1">Example: steel.m</h1>
+<div class="body"><p class="shortdesc">This example illustrates using the Cplex Class
+API  to solve a multiperiod production model.</p>
+<p class="p">The model in this example is an implementation of the
+model called "steelT.mod" on page 58 in the AMPL book by Fourer, Gay
+and Kernighan.  In the AMPL example, a multiperiod production model
+is given, with data for 4 weeks. The parameters for the model are:</p>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table ShadedHead" rules="all" frame="border" border="1"><thead class="thead" align="left"><tr class="row"><th class="entry" align="left" valign="top" width="50%" id="d4602e17">Parameter</th>
+<th class="entry" align="left" valign="top" width="50%" id="d4602e19">Description</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" align="left" valign="top" width="50%" headers="d4602e17 ">nProd</td>
+<td class="entry" align="left" valign="top" width="50%" headers="d4602e19 ">Number of products</td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%" headers="d4602e17 ">nTime</td>
+<td class="entry" align="left" valign="top" width="50%" headers="d4602e19 ">Number of time periods</td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%" headers="d4602e17 ">rate(p)</td>
+<td class="entry" align="left" valign="top" width="50%" headers="d4602e19 ">Rate of production for product p</td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%" headers="d4602e17 ">inv0(p)</td>
+<td class="entry" align="left" valign="top" width="50%" headers="d4602e19 ">Initial inventoryfor product p</td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%" headers="d4602e17 ">avail(t)</td>
+<td class="entry" align="left" valign="top" width="50%" headers="d4602e19 ">Hours available in time period t</td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%" headers="d4602e17 ">market(p)(t)</td>
+<td class="entry" align="left" valign="top" width="50%" headers="d4602e19 ">Demand for product p in time period t</td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%" headers="d4602e17 ">prodcost(p)</td>
+<td class="entry" align="left" valign="top" width="50%" headers="d4602e19 ">Production cost per unit of product p</td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%" headers="d4602e17 ">invcost(p)</td>
+<td class="entry" align="left" valign="top" width="50%" headers="d4602e19 ">Inventory cost per unit of product p</td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%" headers="d4602e17 ">revenue(p)(t)</td>
+<td class="entry" align="left" valign="top" width="50%" headers="d4602e19 ">Revenue per unit of product p in time period t</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The decision variables of the model are:</p>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table ShadedHead" rules="all" frame="border" border="1"><thead class="thead" align="left"><tr class="row"><th class="entry" align="left" valign="top" width="50%" id="d4602e75">Decision Variable </th>
+<th class="entry" align="left" valign="top" width="50%" id="d4602e77">Description</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" align="left" valign="top" width="50%" headers="d4602e75 ">Make(p)(t)</td>
+<td class="entry" align="left" valign="top" width="50%" headers="d4602e77 ">Amount produced of product p in time period t </td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%" headers="d4602e75 ">Inv(p)(t)</td>
+<td class="entry" align="left" valign="top" width="50%" headers="d4602e77 ">Amount inventoried of product p in time period t</td>
+</tr>
+<tr class="row"><td class="entry" align="left" valign="top" width="50%" headers="d4602e75 ">Sell(p)(t)</td>
+<td class="entry" align="left" valign="top" width="50%" headers="d4602e77 ">Amount sold of product p in time period t</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The objective function is to</p>
+<pre class="pre codeblock">maximize sum(over p,t) (revenue(p)(t)*Sell(p)(t) - prodcost(p)*Make(p)(t) - invcost(p)*Inv(p)(t))</pre>
+<p class="p">  The constraints are:</p>
+<ul class="ul"><li class="li"><p class="p">For each t: (time availability constraint)</p>
+ <pre class="pre codeblock">sum(over p) ((1/rate(p)) * Make(p)(t)) &lt;= avail(t)</pre>
+ </li>
+<li class="li"><p class="p">For each p, (t=0): (balance constraint)</p>
+ <pre class="pre codeblock">Make(p)(0) - Sell(p)(0) - Inv(p)(0) = -inv0(p)</pre>
+ </li>
+<li class="li"><p class="p">For each pair (p,t) (t&gt;0): (balance constraint) </p>
+ <pre class="pre codeblock">Make(p)(t) + Inv(p)(t-1) - Sell(p)(t) - Inv(p)(t) = 0</pre>
+ </li>
+</ul>
+<p class="p">The bounds on the variables are as follows. All variables
+are nonnegative ( &gt;= 0 ). For each (p,t), <samp class="ph codeph">Sell(p)(t) &lt;=
+market(p)(t)</samp>. All other variables have infinite upper bounds.</p>
+<p class="p">See also the example
+file <a class="xref" href="matlab:doc steel.m"><samp class="ph codeph">steel.m</samp></a>.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../topics/examples_cplex.html" title="These examples illustrate the usage of the Cplex Class API to solve mathematical programming problems.">Examples of the Cplex Class API</a></div>
+</div>
+</div></body>
+</html>

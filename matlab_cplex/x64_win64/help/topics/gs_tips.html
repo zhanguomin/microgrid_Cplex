@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="© Copyright IBM Corporation 2011" />
+<meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2011" />
+<meta name="security" content="public" />
+<meta name="Robots" content="index,follow" />
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.icra.org/ratingsv02.html" l gen true r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true r (n 0 s 0 v 0 l 0) "http://www.classify.org/safesurf/" l gen true r (SS~~000 1))' />
+<meta name="DC.Type" content="topic" />
+<meta name="DC.Title" content="Programming tips" />
+<meta name="abstract" content="As you model and solve mathematical programming problems, you may find it useful to refer to the documentation to find answers to your questions." />
+<meta name="description" content="As you model and solve mathematical programming problems, you may find it useful to refer to the documentation to find answers to your questions." />
+<meta name="DC.Relation" scheme="URI" content="../topics/gs.html" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="y9c723zU" />
+<meta name="DC.Language" content="en-us" />
+<!-- Licensed Materials Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="../ibmdita.css" />
+<link rel="stylesheet" type="text/css" href="../swg_info_common_opti.css" />
+<link rel="Start" href="../topics/gs.html" />
+<title>Programming tips</title>
+</head>
+<body id="y9c723zU"><a name="y9c723zU"><!-- --></a>
+<h1 class="title topictitle1">Programming tips</h1>
+<div class="body"><p class="shortdesc">As you model and solve mathematical programming
+problems, you may find it useful to refer to the documentation to
+find answers to your questions.</p>
+<p class="p">As you model and solve mathematical programming problems
+with CPLEX® for MATLAB®, you
+may find it useful to refer to the documentation to find answers to
+your questions.</p>
+<p class="p">Some common questions are answered in this documentation
+as well as the <em class="ph i">CPLEX User's
+Manual</em> available in your CPLEX distribution.</p>
+<ul class="ul"><li class="li"><p class="p"><strong class="ph b">How do I use the MATLAB sparse
+matrix format with the CPLEX for
+MATLAB functions and classes?</strong></p>
+<p class="p">Either sparse or
+dense format can be used in the connector in all places where double
+matrices and vectors are accepted as arguments.</p>
+ </li>
+<li class="li"><p class="p"><strong class="ph b">How do I understand and deal
+with my infeasible (or unbounded) model?</strong></p>
+ <p class="p">The section <em class="ph i">Infeasibility and unboundedness</em> of the <em class="ph i">CPLEX User's Manual</em> documents
+tools to help you analyze the source of the infeasibility in a model:
+the preprocessing reduction parameter for distinguishing infeasibility
+from unboundedness, the conflict refiner for detecting minimal sets
+of mutually contradictory bounds and constraints, and FeasOpt for
+repairing infeasibilities.</p>
+ </li>
+<li class="li"><p class="p"><strong class="ph b">How do I obtain a pool of multiple
+solutions?</strong></p>
+<p class="p">The section <em class="ph i">Discrete optimization
+ &gt; Solution pool: generating and keeping multiple solutions</em> of
+the <em class="ph i">CPLEX User's
+Manual</em> introduces the solution pool for storing multiple solutions
+to a mixed integer programming problem (MIP) and explains techniques
+for generating and managing those solutions.</p>
+ </li>
+<li class="li"><p class="p"><strong class="ph b">How do I get this difficult model
+to solve?</strong></p>
+<p class="p">The section <em class="ph i">Programming considerations &gt;
+Tuning tool</em> of the <em class="ph i">User's Manual</em> documents the
+tuning tool, a utility to aid you in improving the performance of
+your optimization applications, analyzes a model or a group of models
+and suggests a suite of parameter settings for you to use that provide
+better performance than the default parameter settings for your model
+or group of models.</p>
+ </li>
+<li class="li"><p class="p"><strong class="ph b">How do I invoke parallel threads
+to solve my model faster?</strong></p>
+ <p class="p">The section <em class="ph i">Advanced
+programming techniques  &gt; Parallel optimizers</em>  of the <em class="ph i">CPLEX User's Manual</em> documents
+the CPLEX parallel optimizers.</p>
+ </li>
+<li class="li"><p class="p"><strong class="ph b">How do I set algorithm control
+parameters?</strong></p>
+<p class="p">The <em class="ph i">CPLEX Parameters Reference Manual </em>lists
+all of the parameters and explains their settings. To learn about
+setting parameters when using the toolbox functions, see the function <samp class="ph codeph">cplexoptimset</samp>. For information about setting parameters
+while using the Cplex class API, see <samp class="ph codeph">Cplex.Param</samp>.</p>
+ </li>
+<li class="li"><p class="p"><strong class="ph b">How do I check the consistency
+of my data?</strong></p>
+ <p class="p">There is a consistency check which
+can be controlled by the datacheck parameter. The default value of <samp class="ph codeph">datacheck</samp> is off, which can improve the performance
+in the case of valid model data. If the <samp class="ph codeph">datacheck</samp> is
+on, then a detailed error message will be displayed in the case of
+invalid data. For information about setting parameters, see <samp class="ph codeph">Cplex.Param</samp> and <samp class="ph codeph">cplexoptimset</samp>.</p>
+ </li>
+</ul>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../topics/gs.html" title="As you install and get started using CPLEX for MATLAB, you can refer to this guide for more information on installation, licensing, and integration with MATLAB.">Getting started with CPLEX for MATLAB</a></div>
+</div>
+</div></body>
+</html>
